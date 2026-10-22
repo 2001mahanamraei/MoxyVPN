@@ -277,7 +277,7 @@ class SettingsPage(tk.Frame):
         self.row("View logs", "Recent connection activity", right="chevron",
                  command=lambda w: (a.close_settings(), a.show_log()))
         self.row("Version", a.VERSION)
-        self.row("Source code", "Based on FoxyVPN by Vauth (MIT) - github.com/Vauth/FoxyVPN",
+        self.row("Source code", "Created By Mahx - MoxyVPN",
                  command=lambda w: webbrowser.open(SOURCE_URL), right="chevron")
 
         self.section("Account")
