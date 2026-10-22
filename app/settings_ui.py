@@ -6,7 +6,7 @@ import usage
 from theme import C, mix
 
 FONT = "Segoe UI"
-SOURCE_URL = "https://github.com/Vauth/FoxyVPN"
+SOURCE_URL = "https://github.com/2001mahanamraei/MoxyVPN"
 
 DNS_LABELS = {"auto": "Automatic", "cloudflare": "Cloudflare (encrypted)",
               "google": "Google (encrypted)", "quad9": "Quad9 (encrypted)", "off": "Off (plain DNS)"}
