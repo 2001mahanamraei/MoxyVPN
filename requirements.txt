@@ -1,0 +1,4 @@
+# Python packages bundled into the Windows build (and needed to run from source)
+foxyvpn==1.0.2
+pystray==0.19.5
+pillow==13.0.0

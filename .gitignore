@@ -1,0 +1,13 @@
+build/
+dist/
+__pycache__/
+*.pyc
+*.keystore
+*.jks
+keystore-password.txt
+.foxyvpn-tokens.json
+state.json
+tun/config.yaml
+tun/*.exe
+tun/*.dll
+*.apk

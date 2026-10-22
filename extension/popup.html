@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+  <title>MoxyVPN</title>
+</head>
+<body>
+  <header>
+    <img src="icons/moxy-48.png" width="36" height="36" alt="">
+    <div>
+      <h1>MoxyVPN</h1>
+      <p class="muted small">Browser control</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <button id="power" class="power off" title="Turn browser VPN on/off" aria-label="Power">
+        <svg viewBox="0 0 24 24" width="46" height="46" fill="none" stroke="currentColor"
+             stroke-width="2.4" stroke-linecap="round">
+          <path d="M12 3v8"/><path d="M6.6 6.6a8 8 0 1 0 10.8 0"/>
+        </svg>
+      </button>
+      <h2 id="title">Disconnected</h2>
+      <p id="sub" class="muted">Tap the power button</p>
+    </section>
+
+    <section class="card" id="appCard">
+      <div class="row">
+        <span class="muted">MoxyVPN app</span>
+        <span id="appState" class="val">-</span>
+      </div>
+      <div class="row" id="appBtnRow" hidden>
+        <span class="muted small" id="appHint"></span>
+        <button id="appBtn" class="chip">Connect</button>
+      </div>
+    </section>
+
+    <section class="card" id="usageCard" hidden>
+      <div class="row"><span class="label">DATA USAGE</span><button id="refresh" class="link">&#8635; Refresh</button></div>
+      <div class="big"><span id="used">-</span><span id="of" class="muted"></span></div>
+      <div class="bar"><div id="barFill"></div></div>
+      <p id="usageLine" class="muted small"></p>
+    </section>
+
+    <details class="card">
+      <summary>Sites &amp; settings</summary>
+      <div class="seg" id="modeSeg">
+        <button data-mode="all">All sites</button>
+        <button data-mode="selected">Selected sites</button>
+      </div>
+      <div id="sitesBox" hidden>
+        <textarea id="sites" rows="3" placeholder="one domain per line, e.g. youtube.com"></textarea>
+        <button id="addSite" class="chip wide">+ Add this site</button>
+      </div>
+      <label class="check"><input type="checkbox" id="bypassIr"> Iranian (.ir) sites go direct</label>
+      <label class="check"><input type="checkbox" id="failClosed"> Block traffic if the proxy is down</label>
+      <label class="muted small">Always direct (one domain per line)</label>
+      <textarea id="bypassExtra" rows="2" placeholder="example.com"></textarea>
+      <div class="row">
+        <label class="muted small" for="port">Proxy port</label>
+        <input id="port" type="number" min="1" max="65535">
+      </div>
+    </section>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>
